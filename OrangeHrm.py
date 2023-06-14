@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 # 1 opening browser
-driver = webdriver.Firefox()
+driver = webdriver.firefox()
 # 2 going to url
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 # hard time

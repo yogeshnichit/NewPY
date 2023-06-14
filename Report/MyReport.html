@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>MyReport.html</title>
+    <title>Test Report</title>
     <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
   <body onLoad="init()">
     <script>/* This Source Code Form is subject to the terms of the Mozilla Public
@@ -70,19 +70,9 @@ function hideExtras(colresultElem) {
 }
 
 function showFilters() {
-    let visibleString = getQueryParameter('visible') || 'all';
-    visibleString = visibleString.toLowerCase();
-    const checkedItems = visibleString.split(',');
-
     const filterItems = document.getElementsByClassName('filter');
-    for (let i = 0; i < filterItems.length; i++) {
+    for (let i = 0; i < filterItems.length; i++)
         filterItems[i].hidden = false;
-
-        if (visibleString != 'all') {
-            filterItems[i].checked = checkedItems.includes(filterItems[i].getAttribute('data-test-result'));
-            filterTable(filterItems[i]);
-        }
-    }
 }
 
 function addCollapse() {
@@ -253,53 +243,23 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>MyReport.html</h1>
-    <p>Report generated on 13-Jun-2023 at 08:26:42 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 13-Jun-2023 at 22:35:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
-        <td>BUILD_ID</td>
-        <td>2</td></tr>
-      <tr>
-        <td>BUILD_NUMBER</td>
-        <td>2</td></tr>
-      <tr>
-        <td>BUILD_TAG</td>
-        <td>jenkins-Demo_Pytest-2</td></tr>
-      <tr>
-        <td>BUILD_URL</td>
-        <td><a href="http://localhost:8080/job/Demo_Pytest/2/" target="_blank">http://localhost:8080/job/Demo_Pytest/2/</a></td></tr>
-      <tr>
-        <td>CI</td>
-        <td>true</td></tr>
-      <tr>
-        <td>EXECUTOR_NUMBER</td>
-        <td>1</td></tr>
-      <tr>
-        <td>JENKINS_URL</td>
-        <td><a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a></td></tr>
-      <tr>
-        <td>JOB_NAME</td>
-        <td>Demo_Pytest</td></tr>
-      <tr>
-        <td>NODE_NAME</td>
-        <td>built-in</td></tr>
-      <tr>
         <td>Packages</td>
-        <td>{"pluggy": "1.0.0", "pytest": "7.3.1"}</td></tr>
+        <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.3.2"}</td></tr>
       <tr>
         <td>Platform</td>
         <td>Windows-10-10.0.19045-SP0</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"html": "3.2.0", "metadata": "2.0.4", "xdist": "3.2.1"}</td></tr>
+        <td>{"allure-pytest": "2.9.45", "forked": "1.4.0", "html": "3.1.1", "metadata": "2.0.1", "xdist": "2.5.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.11.3</td></tr>
-      <tr>
-        <td>WORKSPACE</td>
-        <td>C:\Users\HP\Desktop\Python\Pytest</td></tr></table>
+        <td>3.10.5</td></tr></table>
     <h2>Summary</h2>
-    <p>7 tests ran in 19.91 seconds. </p>
+    <p>7 tests ran in 11.85 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">7 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -314,73 +274,73 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_file1.py::Test_py::test_sum_001</td>
+          <td class="col-name">testCases/test_file12.py::Test_py::test_sum_001</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/>[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum -- &gt;6
+            <div class="log">[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum -- &gt;6
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_file1.py::Test_py::test_credenceUrl_003</td>
-          <td class="col-duration">16.45</td>
+          <td class="col-name">testCases/test_file12.py::Test_py::test_mul_002</td>
+          <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/>[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>Credence
+            <div class="log">[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>mul -- &gt;8
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">testCases/test_file12.py::Test_py::test_credenceUrl_003</td>
+          <td class="col-duration">9.60</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>Credence
 Your are at credence site
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_file1.py::Test_py::test_mul_002</td>
+          <td class="col-name">testCases/test_file12.py::Test_py::test_sum_004</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/>[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>mul -- &gt;8
+            <div class="log">[gw3] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw3] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw3] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw3] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum_004 -- &gt;16
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_file2.py::Test_py02::test_sum_005</td>
+          <td class="col-name">testCases/test_file22.py::Test_py02::test_sum_005</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/>[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum -- &gt;10
+            <div class="log">[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum -- &gt;10
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_file2.py::Test_py02::test_credence_007</td>
-          <td class="col-duration">18.33</td>
+          <td class="col-name">testCases/test_file22.py::Test_py02::test_credence_007</td>
+          <td class="col-duration">9.67</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/>[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;+91 8983282704&#x27;, &#x27;+91 8237916162&#x27;, &#x27;+91 7385318590&#x27;, &#x27;+91 9579064658&#x27;, &#x27;+91 9091929355&#x27;, &#x27;+91 9370733829&#x27;]
+            <div class="log">[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;+91 8983282704&#x27;, &#x27;+91 8237916162&#x27;, &#x27;+91 7385318590&#x27;, &#x27;+91 9579064658&#x27;, &#x27;+91 9091929355&#x27;, &#x27;+91 9370733829&#x27;]
 Mobile number is present
 4
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_file1.py::Test_py::test_sum_004</td>
+          <td class="col-name">testCases/test_file32.py::Test_py03::test_sum_006</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/>[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw1] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum_004 -- &gt;16
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_file3.py::Test_py03::test_sum_006</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/>[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe[gw0] win32 -- Python 3.11.3 C:\Users\HP\AppData\Local\Programs\Python\Python311\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum -- &gt;16
+            <div class="log">[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe[gw2] win32 -- Python 3.10.5 C:\Users\NYK\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>sum -- &gt;16
 <br/></div></td></tr></tbody></table></body></html>
